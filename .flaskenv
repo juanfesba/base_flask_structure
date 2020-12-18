@@ -1,2 +1,2 @@
 FLASK_APP=src.webapp
-FLASK_ENV=production
+FLASK_ENV=development
