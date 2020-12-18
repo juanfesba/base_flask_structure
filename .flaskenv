@@ -1,1 +1,1 @@
-FLASK_APP=src.webapp
+FLASK_APP=src.webchat
