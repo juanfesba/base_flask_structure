@@ -3,4 +3,4 @@ from . import app
 
 @app.route("/")
 def home():
-    return render_template("home_page.html")
+    return render_template("home_page.html", name=None)
