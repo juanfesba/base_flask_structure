@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Chatting WebPage with Templates</title>
+        <!--
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+        -->
+    </head>
+    <body>
+        {%if name %}
+        <span class="message">Hello there, {{ name }}!</span>
+        {% else %}
+        <span class="message">Welcome Dude</span>
+        {% endif %}
+    </body>
+</html>

@@ -1,7 +1,6 @@
-print(__name__)
-print(__package__)
+from flask import render_template
 from . import app
 
 @app.route("/")
 def home():
-    return "Chatting WebPage"
+    return render_template("home_page.html")
