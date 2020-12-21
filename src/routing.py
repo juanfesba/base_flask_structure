@@ -1,4 +1,3 @@
-from . import app
 from flask import render_template, Blueprint
 
 bp = Blueprint('home_page', __name__)
