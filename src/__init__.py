@@ -7,7 +7,7 @@ def create_app(test_config=None):
         SECRET_KEY=os.environ.get('SECRET_KEY')
     )
 
-    from . import home_page  # For import side-effects of setting up routes.
+    from . import home_page
     app.register_blueprint(home_page.bp)
 
     return app
