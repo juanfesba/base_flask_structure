@@ -1,2 +1,13 @@
+import os
 import flask
-app = flask.Flask(__name__)
+
+def create_app(test_config=None):
+    app = flask.Flask(__name__)
+    app.config.from_mapping(
+        SECRET_KEY=os.environ.get('SECRET_KEY')
+    )
+
+    from . import home_page  # For import side-effects of setting up routes.
+    app.register_blueprint(home_page.bp)
+
+    return app
