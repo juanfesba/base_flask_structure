@@ -1,11 +1,13 @@
 import unittest
 
 from flask import render_template
-from src import create_app, home_page
+#from src import create_app, home_page
+from src import app, home_page
 
 class Test_TestIncrementDecrement(unittest.TestCase):
     def setUp(self):
-        self.app = create_app()
+        self.app = app
+        #self.app = create_app()
 
     def test_increment(self):
         with self.app.test_request_context(): #with app.app_context(), app.test_request_context():
